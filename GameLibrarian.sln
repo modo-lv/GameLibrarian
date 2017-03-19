@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLib.Main", "GameLib.Mai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLib.Cli", "GameLib.Cli\GameLib.Cli.csproj", "{42BC9CCB-E6EF-4E4F-BAF3-9935ED120FF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLib.Wpf", "GameLib.Wpf\GameLib.Wpf.csproj", "{8CF911EA-9A5C-4886-B18A-8B55EA321AEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{42BC9CCB-E6EF-4E4F-BAF3-9935ED120FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42BC9CCB-E6EF-4E4F-BAF3-9935ED120FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42BC9CCB-E6EF-4E4F-BAF3-9935ED120FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF911EA-9A5C-4886-B18A-8B55EA321AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF911EA-9A5C-4886-B18A-8B55EA321AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF911EA-9A5C-4886-B18A-8B55EA321AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF911EA-9A5C-4886-B18A-8B55EA321AEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
