@@ -1,0 +1,5 @@
+All games: XML list at "http://steamcommunity.com/id/USERNAME/games?tab=all&xml=1"
+
+Installed games:
+1) Find Steam app folder (steamapps)
+2) Each installed game has appmanifest_XXXXXX.acf file
