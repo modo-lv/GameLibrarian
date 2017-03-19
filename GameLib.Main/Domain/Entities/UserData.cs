@@ -4,8 +4,8 @@ using System.Text;
 
 namespace GameLib.Main.Domain.Entities
 {
-	public enum GamePlatform
+	public class UserData
 	{
-		Steam
+		public String Username;
 	}
 }

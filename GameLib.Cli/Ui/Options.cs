@@ -1,4 +1,5 @@
-﻿using CommandLine;
+﻿using System;
+using CommandLine;
 using GameLib.Main.Domain.Entities;
 
 namespace GameLib.Cli.Ui
@@ -10,6 +11,9 @@ namespace GameLib.Cli.Ui
 
 		[Option(shortName: 'a', longName: "action", Default = ActionType.List)]
 		public ActionType Action { get; set; }
+
+		[Option(shortName:'u', longName:"username", Default = "modo_lv")]
+		public String Username { get; set; }
 
 
 		public enum ActionType

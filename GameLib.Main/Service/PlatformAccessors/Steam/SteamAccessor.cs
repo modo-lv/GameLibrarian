@@ -8,14 +8,18 @@ using GameLib.Main.Domain.Inputs;
 
 namespace GameLib.Main.Service.PlatformAccessors.Steam
 {
-	public class SteamAccessor
+	public class SteamAccessor : IPlatformAccessor
 	{
-		public async Task<GameList> ListGames(GameListType listType = GameListType.All)
+		private readonly UserData _userData;
+
+		public SteamAccessor(UserData userData) { this._userData = userData; }
+
+		public async Task<GameList> GetGameList(GameListType listType = GameListType.All)
 		{
 			var client = new HttpClient();
-			var xml = await client.GetStringAsync(@"http://steamcommunity.com/id/modo_lv/games?tab=all&xml=1");
+			var xml = await client.GetStringAsync(
+				$"http://steamcommunity.com/id/{this._userData.Username}/games?tab=all&xml=1");
 
-			//var list = XmlConvert.DeserializeObject<SteamGamesList>(result);
 			var ser = new XmlSerializer(typeof(SteamGamesList));
 			var list = (SteamGamesList)ser.Deserialize(new StringReader(xml));
 
@@ -23,12 +27,5 @@ namespace GameLib.Main.Service.PlatformAccessors.Steam
 			result.AddRange(list.Games.Select(steam => new GameEntry {Name = steam.Name}));
 			return result;
 		}
-	}
-
-	public enum GameListType
-	{
-		All,
-		Installed,
-		Uninstalled
 	}
 }

@@ -6,6 +6,5 @@ namespace GameLib.Main.Domain.Entities
 {
 	public class GameList : List<GameEntry>
 	{
-		
 	}
 }
